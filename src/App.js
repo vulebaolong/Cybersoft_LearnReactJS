@@ -1,17 +1,25 @@
 // import logo from "./logo.svg";
 import "./App.css";
+// import DemoState from "./DemoState/DemoState";
+import ExStateCar from "./ExStateCar/ExStateCar";
+// import DataBinding from "./DataBinding/DataBinding";
+// import EventHanding from "./EventHanding/EventHanding";
+// import ExLayout from "./ExLayout/ExLayout";
 // import DemoClass from "./DemoComponent/DemoClass";
 // import DemoFunction from "./DemoComponent/DemoFunction";
-import DemoHeader from "./DemoComponent/DemoHeader";
-import Ex_Layout from "./Ex_Layout/Ex_Layout";
+// import DemoHeader from "./DemoComponent/DemoHeader";
 
 function App() {
     return (
         <div>
             {/* <DemoClass /> */}
             {/* <DemoFunction /> */}
-            <DemoHeader />
-            <Ex_Layout />
+            {/* <DemoHeader /> */}
+            {/* <ExLayout /> */}
+            {/* <DataBinding /> */}
+            {/* <EventHanding /> */}
+            {/* <DemoState /> */}
+            <ExStateCar />
         </div>
     );
 }
