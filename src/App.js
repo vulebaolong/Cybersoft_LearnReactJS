@@ -1,7 +1,10 @@
 // import logo from "./logo.svg";
 import "./App.css";
+import ExShoeShop from "./ExShoeShop/ExShoeShop";
+// import DemoProp from "./DemoProp/DemoProp";
 // import DemoState from "./DemoState/DemoState";
-import ExStateCar from "./ExStateCar/ExStateCar";
+// import ExStateCar from "./ExStateCar/ExStateCar";
+// import RenderWithMap from "./RenderWithMap/RenderWithMap";
 // import DataBinding from "./DataBinding/DataBinding";
 // import EventHanding from "./EventHanding/EventHanding";
 // import ExLayout from "./ExLayout/ExLayout";
@@ -11,7 +14,7 @@ import ExStateCar from "./ExStateCar/ExStateCar";
 
 function App() {
     return (
-        <div>
+        <div className="container">
             {/* <DemoClass /> */}
             {/* <DemoFunction /> */}
             {/* <DemoHeader /> */}
@@ -19,7 +22,10 @@ function App() {
             {/* <DataBinding /> */}
             {/* <EventHanding /> */}
             {/* <DemoState /> */}
-            <ExStateCar />
+            {/* <ExStateCar /> */}
+            {/* <RenderWithMap /> */}
+            {/* <DemoProp /> */}
+            <ExShoeShop />
         </div>
     );
 }
