@@ -1,6 +1,6 @@
 // import logo from "./logo.svg";
 import "./App.css";
-import ExShoeShop from "./ExShoeShop/ExShoeShop";
+// import ExShoeShop from "./ExShoeShop/ExShoeShop";
 // import DemoProp from "./DemoProp/DemoProp";
 // import DemoState from "./DemoState/DemoState";
 // import ExStateCar from "./ExStateCar/ExStateCar";
@@ -11,10 +11,12 @@ import ExShoeShop from "./ExShoeShop/ExShoeShop";
 // import DemoClass from "./DemoComponent/DemoClass";
 // import DemoFunction from "./DemoComponent/DemoFunction";
 // import DemoHeader from "./DemoComponent/DemoHeader";
+// import ExMovie from "./ExMovie/ExMovie";
+import DemoMiniRedux from "./DemoMiniRedux/DemoMiniRedux";
 
 function App() {
     return (
-        <div className="container">
+        <div>
             {/* <DemoClass /> */}
             {/* <DemoFunction /> */}
             {/* <DemoHeader /> */}
@@ -25,7 +27,9 @@ function App() {
             {/* <ExStateCar /> */}
             {/* <RenderWithMap /> */}
             {/* <DemoProp /> */}
-            <ExShoeShop />
+            {/* <ExShoeShop /> */}
+            {/* <ExMovie /> */}
+            <DemoMiniRedux />
         </div>
     );
 }
