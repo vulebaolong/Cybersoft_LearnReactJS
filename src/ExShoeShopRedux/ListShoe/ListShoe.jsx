@@ -3,29 +3,22 @@ import ItemShoe from "./ItemShoe/ItemShoe";
 import { connect } from "react-redux";
 
 class ListShoe extends Component {
-    renderListShoe = () => {
-        return this.props.shoeArr.map((item) => {
-            return (
-                <ItemShoe
-                    key={item.id}
-                    clickDetail={this.props.clickDetail}
-                    handleAddToCart={this.props.handleAddToCart}
-                    item={item}
-                />
-            );
+    renderListShoe = (shoeArr) => {
+        return shoeArr.map((shoe) => {
+            return <ItemShoe key={shoe.id} shoe={shoe} />;
         });
     };
     render() {
-        console.log(this.props);
-        return <div className="row">{this.renderListShoe()}</div>;
+        const { shoeReducer } = this.props;
+        const { shoeArr } = shoeReducer;
+        return <div className="row">{this.renderListShoe(shoeArr)}</div>;
     }
 }
 
 // lấy dữ liệu từ store trở thành props
 let mapStateToProps = (state) => {
-    console.log(state);
     return {
-        // shoeArrNew: state.abc,
+        shoeReducer: state.shoeReducer,
     };
 };
 

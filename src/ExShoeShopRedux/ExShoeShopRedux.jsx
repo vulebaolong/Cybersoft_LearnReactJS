@@ -6,54 +6,9 @@ import CartShoe from "./CartShoe/CartShoe";
 
 export default class ExShoeShopRedux extends Component {
     state = {
-        shoeArr,
+        shoeArr: shoeArr,
         detailShoe: shoeArr[0],
         cart: [],
-    };
-
-    handleViewDetail = (shoe) => {
-        // console.log(123);
-        this.setState({
-            detailShoe: shoe,
-        });
-    };
-
-    handleAddToCart = (shoe) => {
-        // item
-        const itemShoe = { ...shoe, num: 1 };
-
-        //clone cart
-        const cloneCart = [...this.state.cart];
-
-        const index = cloneCart.findIndex((item) => {
-            return item.name === itemShoe.name;
-        });
-
-        //1 nếu trùng
-        if (index !== -1) {
-            cloneCart[index].num++;
-            this.setState({
-                cart: cloneCart,
-            });
-            return;
-        }
-
-        //2 trùng
-        cloneCart.push(itemShoe);
-        this.setState({
-            cart: cloneCart,
-        });
-    };
-
-    handleDeleteCart = (shoe) => {
-        const cloneCart = [...this.state.cart];
-        const index = cloneCart.findIndex((item) => {
-            return item.name === shoe.name;
-        });
-        cloneCart.splice(index, 1);
-        this.setState({
-            cart: cloneCart,
-        });
     };
 
     handleChangeNum = (shoe, option) => {
@@ -75,22 +30,13 @@ export default class ExShoeShopRedux extends Component {
             <div>
                 <div className="row">
                     <div className="col-6">
-                        <CartShoe
-                            cart={this.state.cart}
-                            handleDeleteCart={this.handleDeleteCart}
-                            handleChangeNum={this.handleChangeNum}
-                        />
+                        <DetailShoe />
+                        <CartShoe />
                     </div>
                     <div className="col-6">
-                        <ListShoe
-                            handleAddToCart={this.handleAddToCart}
-                            shoeArr={shoeArr}
-                            clickDetail={this.handleViewDetail}
-                        />
+                        <ListShoe />
                     </div>
                 </div>
-
-                <DetailShoe detail={this.state.detailShoe} />
             </div>
         );
     }

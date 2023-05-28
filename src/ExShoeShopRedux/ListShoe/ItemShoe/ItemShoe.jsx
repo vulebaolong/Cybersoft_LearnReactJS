@@ -1,27 +1,28 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
 
-export default class ItemShoe extends Component {
+class ItemShoe extends Component {
     render() {
+        const { handleAddToCartRedux, handleViewDetailRedux, shoe } = this.props;
         return (
             <div className="col-6">
                 <div className="card p-4 h-100" style={{ width: "18rem" }}>
-                    <img src={this.props.item.image} className="card-img-top" alt="..." />
+                    <img src={shoe.image} className="card-img-top" alt="..." />
                     <div className="card-body">
-                        <h5 className="card-title">{this.props.item.name}</h5>
-                        <p className="card-text">{this.props.item.description}</p>
+                        <h5 className="card-title">{shoe.name}</h5>
+                        <p className="card-text">{shoe.description}</p>
                     </div>
                     <button
                         onClick={() => {
-                            this.props.clickDetail(this.props.item);
+                            handleViewDetailRedux(shoe);
                         }}
-                        href="#"
                         className="btn btn-primary"
                     >
                         Go somewhere
                     </button>
                     <button
                         onClick={() => {
-                            this.props.handleAddToCart(this.props.item);
+                            handleAddToCartRedux(shoe);
                         }}
                         className="btn btn-secondary"
                     >
@@ -32,3 +33,22 @@ export default class ItemShoe extends Component {
         );
     }
 }
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        handleViewDetailRedux: (shoe) => {
+            dispatch({
+                type: "VIEW_DETAIL",
+                payload: shoe,
+            });
+        },
+        handleAddToCartRedux: (shoe) => {
+            dispatch({
+                type: "ADD_CART",
+                payload: shoe,
+            });
+        },
+    };
+};
+
+export default connect(null, mapDispatchToProps)(ItemShoe);

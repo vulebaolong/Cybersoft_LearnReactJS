@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { TANG } from "./redux/constant/numberConstant";
+import Number from "./Number/Number";
 
 class DemoMiniRedux extends Component {
     render() {
@@ -26,6 +27,7 @@ class DemoMiniRedux extends Component {
                 >
                     +
                 </button>
+                <Number />
             </div>
         );
     }

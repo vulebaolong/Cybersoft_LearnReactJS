@@ -1,7 +1,10 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
 
-export default class DetailShoe extends Component {
+class DetailShoe extends Component {
     render() {
+        const { shoeReducer } = this.props;
+        const { viewDetail } = shoeReducer;
         return (
             <div>
                 <table className="table">
@@ -15,10 +18,10 @@ export default class DetailShoe extends Component {
                     </thead>
                     <tbody>
                         <tr>
-                            <th scope="row">{this.props.detail.name}</th>
-                            <td>{this.props.detail.price}</td>
-                            <td>{this.props.detail.description}</td>
-                            <td>{this.props.detail.quantity}</td>
+                            <th scope="row">{viewDetail.name}</th>
+                            <td>{viewDetail.price}</td>
+                            <td>{viewDetail.description}</td>
+                            <td>{viewDetail.quantity}</td>
                         </tr>
                     </tbody>
                 </table>
@@ -26,3 +29,11 @@ export default class DetailShoe extends Component {
         );
     }
 }
+
+const mapStatetoProps = (state) => {
+    return {
+        shoeReducer: state.shoeReducer,
+    };
+};
+
+export default connect(mapStatetoProps)(DetailShoe);

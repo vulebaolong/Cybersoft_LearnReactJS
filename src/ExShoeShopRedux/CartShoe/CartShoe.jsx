@@ -1,7 +1,11 @@
 import React, { Component } from "react";
+import ItemCartShoe from "./ItemCartShoe/ItemCartShoe";
+import { connect } from "react-redux";
 
-export default class CartShoe extends Component {
+class CartShoe extends Component {
     render() {
+        const { shoeReducer } = this.props;
+        const { cart } = shoeReducer;
         return (
             <div>
                 <table className="table">
@@ -15,51 +19,8 @@ export default class CartShoe extends Component {
                         </tr>
                     </thead>
                     <tbody>
-                        {this.props.cart.map((item) => {
-                            return (
-                                <tr key={item.id}>
-                                    <th scope="row">{item.name}</th>
-                                    <td className="">
-                                        <div className="d-flex gap-2">
-                                            <button
-                                                onClick={() => {
-                                                    this.props.handleChangeNum(item, 1);
-                                                }}
-                                                className="btn btn-primary"
-                                            >
-                                                +
-                                            </button>
-                                            <p>{item.num}</p>
-                                            <button
-                                                onClick={() => {
-                                                    this.props.handleChangeNum(item, -1);
-                                                }}
-                                                className="btn btn-primary"
-                                            >
-                                                -
-                                            </button>
-                                        </div>
-                                    </td>
-                                    <td>{+item.price * +item.num}</td>
-                                    <td>
-                                        <img
-                                            style={{ width: "50%" }}
-                                            src={item.image}
-                                            alt=""
-                                        />
-                                    </td>
-                                    <td>
-                                        <button
-                                            onClick={() => {
-                                                this.props.handleDeleteCart(item);
-                                            }}
-                                            className="btn btn-primary"
-                                        >
-                                            Xóa
-                                        </button>
-                                    </td>
-                                </tr>
-                            );
+                        {cart.map((shoe) => {
+                            return <ItemCartShoe key={shoe.id} shoe={shoe} />;
                         })}
                     </tbody>
                 </table>
@@ -67,3 +28,11 @@ export default class CartShoe extends Component {
         );
     }
 }
+
+const mapStateToProps = (state) => {
+    return {
+        shoeReducer: state.shoeReducer,
+    };
+};
+
+export default connect(mapStateToProps)(CartShoe);
