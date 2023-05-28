@@ -12,7 +12,8 @@ import "./App.css";
 // import DemoFunction from "./DemoComponent/DemoFunction";
 // import DemoHeader from "./DemoComponent/DemoHeader";
 // import ExMovie from "./ExMovie/ExMovie";
-import DemoMiniRedux from "./DemoMiniRedux/DemoMiniRedux";
+// import DemoMiniRedux from "./DemoMiniRedux/DemoMiniRedux";
+import ExShoeShopRedux from "./ExShoeShopRedux/ExShoeShopRedux";
 
 function App() {
     return (
@@ -29,7 +30,8 @@ function App() {
             {/* <DemoProp /> */}
             {/* <ExShoeShop /> */}
             {/* <ExMovie /> */}
-            <DemoMiniRedux />
+            {/* <DemoMiniRedux /> */}
+            <ExShoeShopRedux />
         </div>
     );
 }
