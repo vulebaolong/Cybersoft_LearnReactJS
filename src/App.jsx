@@ -1,5 +1,6 @@
 // import logo from "./logo.svg";
 import "./App.css";
+// import Lifecycle from "./Lifecycle/Lifecycle";
 // import ExShoeShop from "./ExShoeShop/ExShoeShop";
 // import DemoProp from "./DemoProp/DemoProp";
 // import DemoState from "./DemoState/DemoState";
@@ -13,7 +14,8 @@ import "./App.css";
 // import DemoHeader from "./DemoComponent/DemoHeader";
 // import ExMovie from "./ExMovie/ExMovie";
 // import DemoMiniRedux from "./DemoMiniRedux/DemoMiniRedux";
-import ExShoeShopRedux from "./ExShoeShopRedux/ExShoeShopRedux";
+// import ExShoeShopRedux from "./ExShoeShopRedux/ExShoeShopRedux";
+import VeXemPhim from "./VeXemPhim/VeXemPhim";
 
 function App() {
     return (
@@ -31,7 +33,9 @@ function App() {
             {/* <ExShoeShop /> */}
             {/* <ExMovie /> */}
             {/* <DemoMiniRedux /> */}
-            <ExShoeShopRedux />
+            {/* <ExShoeShopRedux /> */}
+            {/* <Lifecycle /> */}
+            <VeXemPhim />
         </div>
     );
 }
