@@ -1,0 +1,103 @@
+.veXemPhim {
+    background-image: url("./asset/bgmovie.jpg");
+    height: 100vh;
+    width: 100vw;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.veXemPhim:after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.564);
+    z-index: 0;
+}
+
+.cot {
+    color: rgb(230, 230, 0);
+    font-size: 1.5rem;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    margin-right: 0.2rem;
+    border-radius: 0.3rem;
+}
+
+.hang_1 {
+    color: rgb(230, 230, 0);
+    font-size: 1.5rem;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 0.3rem;
+}
+
+.hang {
+    transform: translateX(-15px);
+}
+
+.screen {
+    border-bottom: 50px solid rgb(255, 159, 95);
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    height: 100;
+    width: 100%;
+    filter: drop-shadow(4px 30px 20px rgba(255, 255, 255, 0.5));
+    font-size: 25px;
+    color: #fff;
+}
+
+.gheDaDat {
+    outline: 2px solid orange;
+    background: orange;
+    color: #000;
+    cursor: no-drop !important;
+    width: 40px;
+    height: 40px;
+    border-radius: 0.3rem;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+}
+
+.gheDangChon {
+    background: rgb(109, 238, 109);
+    outline: 2px solid orange;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 0.3rem;
+    font-weight: 700;
+    color: black;
+}
+
+.gheChuaDat {
+    background: rgb(215, 215, 215);
+    outline: 2px solid orange;
+    color: black;
+    cursor: pointer;
+    border-radius: 0.3rem;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+}
