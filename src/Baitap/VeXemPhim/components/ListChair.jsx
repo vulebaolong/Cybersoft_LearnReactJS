@@ -62,6 +62,7 @@ class ListChair extends Component {
                                             </div>
                                         );
                                     }
+                                    return "";
                                 })}
                             </div>
                         );
