@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import { CHANGE_NUM, DELETE_CART } from "../../redux/constant/shoeConstant";
 import { connect } from "react-redux";
+import { deleteAction, changeNumAction } from "./../../redux/actions/shoeAction";
 
 class ItemCartShoe extends Component {
     createName = (name) => {
@@ -69,18 +69,10 @@ class ItemCartShoe extends Component {
 const mapDispatchToProps = (dispatch) => {
     return {
         handleDeleteCart: (shoe) => {
-            const action = {
-                type: DELETE_CART,
-                payload: shoe,
-            };
-            dispatch(action);
+            dispatch(deleteAction(shoe));
         },
         handleChangeNum: (shoe, option) => {
-            const action = {
-                type: CHANGE_NUM,
-                payload: { shoe, option },
-            };
-            dispatch(action);
+            dispatch(changeNumAction(shoe, option));
         },
     };
 };

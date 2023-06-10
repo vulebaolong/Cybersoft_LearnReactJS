@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import { addToCartAction, viewDetailAction } from "../../redux/actions/shoeAction";
 
 class ItemShoe extends Component {
     render() {
@@ -39,16 +40,10 @@ class ItemShoe extends Component {
 const mapDispatchToProps = (dispatch) => {
     return {
         handleViewDetailRedux: (shoe) => {
-            dispatch({
-                type: "VIEW_DETAIL",
-                payload: shoe,
-            });
+            dispatch(viewDetailAction(shoe));
         },
         handleAddToCartRedux: (shoe) => {
-            dispatch({
-                type: "ADD_CART",
-                payload: shoe,
-            });
+            dispatch(addToCartAction(shoe));
         },
     };
 };
