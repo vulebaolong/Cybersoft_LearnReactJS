@@ -124,6 +124,13 @@ function Controll() {
                             VeXemPhim
                         </button>
                     </NavLink>
+
+                    {/* DemoLifeCycle */}
+                    <NavLink to="/demolifecycle">
+                        <button className="btn btn-primary" data-bs-dismiss="offcanvas">
+                            DemoLifeCycle
+                        </button>
+                    </NavLink>
                 </div>
             </div>
         </div>

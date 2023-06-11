@@ -14,6 +14,7 @@ import ExStateCar from "./Baitap/ExStateCar/ExStateCar";
 import Lifecycle from "./Baitap/Lifecycle/Lifecycle";
 import RenderWithMap from "./Baitap/RenderWithMap/RenderWithMap";
 import VeXemPhim from "./Baitap/VeXemPhim/VeXemPhim";
+import DemoLifeCycle from "./Baitap/DemoLifeCycle/DemoLifeCycle";
 
 function App() {
     return (
@@ -34,6 +35,7 @@ function App() {
                         <Route path="lifecycle" element={<Lifecycle />} />
                         <Route path="renderwithmap" element={<RenderWithMap />} />
                         <Route path="vexemphim" element={<VeXemPhim />} />
+                        <Route path="demolifecycle" element={<DemoLifeCycle />} />
                     </Route>
                 </Routes>
             </BrowserRouter>
