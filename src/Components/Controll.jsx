@@ -131,6 +131,13 @@ function Controll() {
                             DemoLifeCycle
                         </button>
                     </NavLink>
+
+                    {/* ReactForm */}
+                    <NavLink to="/reactform">
+                        <button className="btn btn-primary" data-bs-dismiss="offcanvas">
+                            ReactForm
+                        </button>
+                    </NavLink>
                 </div>
             </div>
         </div>

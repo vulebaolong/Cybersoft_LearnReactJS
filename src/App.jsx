@@ -15,6 +15,7 @@ import Lifecycle from "./Baitap/Lifecycle/Lifecycle";
 import RenderWithMap from "./Baitap/RenderWithMap/RenderWithMap";
 import VeXemPhim from "./Baitap/VeXemPhim/VeXemPhim";
 import DemoLifeCycle from "./Baitap/DemoLifeCycle/DemoLifeCycle";
+import Product from "./Baitap/ReactForm/Product";
 
 function App() {
     return (
@@ -36,6 +37,7 @@ function App() {
                         <Route path="renderwithmap" element={<RenderWithMap />} />
                         <Route path="vexemphim" element={<VeXemPhim />} />
                         <Route path="demolifecycle" element={<DemoLifeCycle />} />
+                        <Route path="reactform" element={<Product />} />
                     </Route>
                 </Routes>
             </BrowserRouter>
