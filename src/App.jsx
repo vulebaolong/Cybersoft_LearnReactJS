@@ -16,6 +16,7 @@ import RenderWithMap from "./Baitap/RenderWithMap/RenderWithMap";
 import VeXemPhim from "./Baitap/VeXemPhim/VeXemPhim";
 import DemoLifeCycle from "./Baitap/DemoLifeCycle/DemoLifeCycle";
 import Product from "./Baitap/ReactForm/Product";
+import LearnReduxToolkit from "./Baitap/LearnReduxToolkit/LearnReduxToolkit";
 
 function App() {
     return (
@@ -38,6 +39,7 @@ function App() {
                         <Route path="vexemphim" element={<VeXemPhim />} />
                         <Route path="demolifecycle" element={<DemoLifeCycle />} />
                         <Route path="reactform" element={<Product />} />
+                        <Route path="reduxtoolkit" element={<LearnReduxToolkit />} />
                     </Route>
                 </Routes>
             </BrowserRouter>

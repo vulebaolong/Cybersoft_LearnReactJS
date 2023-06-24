@@ -138,6 +138,13 @@ function Controll() {
                             ReactForm
                         </button>
                     </NavLink>
+
+                    {/* redux tool kit */}
+                    <NavLink to="/reduxtoolkit">
+                        <button className="btn btn-primary" data-bs-dismiss="offcanvas">
+                            Redux - toolkit
+                        </button>
+                    </NavLink>
                 </div>
             </div>
         </div>
